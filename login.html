@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="shortcut icon" type="x-icon" href="Image/logo1.jpg">
+	<title>Login from</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link rel="stylesheet" type="text/css" href="loginstyle.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<div class="container">
+		<header>
+			Ten-D
+			</header>
+		<div class="title"></div>
+		<form>
+				<div class="user-details">
+					<div class="input-box">
+
+						<label for="username" class="details">Name</label>
+						<input type="text" placeholder="Enter Your Name" id="email" required>
+					</div><br>
+					<div class="input-box">
+						<label for="password" class="details">Password</label>
+						<input type="password"  placeholder="Enter your password" id="password" required>
+					</div>
+				</div>
+			
+
+
+
+				<div class="choose">
+					<input type="radio" name="choose" value="A" id="class-1">
+					<input type="radio" name="choose" value="C" id="class-2">
+					<span class="choose-title">Group</span>
+					<div class="catagry">
+						<label for="class-1">
+							<span class="class one"></span>
+							<span class="choose">Arts</span>
+						</label>
+						<label for="class-2">
+							<span class="class two"></span>
+							<span class="choose">Commerce</span>
+						</label>
+					</div>
+				</div>
+
+
+				<div class="button-1">
+					<button type="submit" onclick="auth()">Log In</button>
+				</div>	
+
+				<div class="button-2">
+					<button type="reset" name="Reset">Reset</button>
+				</div>
+		</form>
+	</div>
+
+	<script>
+		function auth(){
+			var email=document.getElementById('email').value;
+			var password=document.getElementById('password').value;
+// condition
+
+if(email=='ten-d2024' && password==102024)
+{
+	window.location.assign('second.html');
+	alert("login Successfully. Click OK");
+}
+else{
+	alert("invalid information");
+	return;
+}
+		}
+
+	</script>
+
+</body>
+</html>

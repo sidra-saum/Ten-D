@@ -1,0 +1,201 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins",sans-serif;
+}
+body{
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+	background: url(Image/dhaka.jpg) center center/cover;
+}
+.container header{
+	position: absolute;
+	font-size: 30px;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: white;
+	padding: 10px 20px;
+	border-radius: 0 0 10px 10px;
+}
+header::before{
+	position: absolute;
+	content: "";
+	width: 30px;
+	height: 30px;
+	background-color: transparent;
+	left: -30px;
+	top: 0;
+	box-shadow: 15px 0 0 white;
+	border-top-right-radius: 50%;
+}
+header::after{
+	position: absolute;
+	content: "";
+	width: 30px;
+	height: 30px;
+	background-color: transparent;
+	right: -30px;
+	top: 0;
+	box-shadow: -15px 0 0 white;
+	border-top-left-radius: 50%;
+}
+.container{
+	border: 2px solid white;
+	max-width: 500px;
+	width: 100%;
+	padding: 2px 35px;
+	backdrop-filter: blur(4px);
+	border-radius: 50px;
+}
+.container .title{
+	padding-top: 50px;
+	font-size: 45px;
+	font-weight: 500;
+	position: relative;
+}
+.container .title::before{
+	content: '';
+	position: absolute;
+	top: 40px;
+	height: 3px;
+	left: 38.4%;
+	bottom: -2%;
+	width: 100px;
+	border-radius: 50px;
+	background: linear-gradient(135deg, #DB07F5, #EB0A20);
+}
+.container form .user-details{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 20px 0 12px 0;
+}
+form .user-details .input-box{
+	width: calc(100% /2 - 20px);
+	margin-bottom: 15px;
+}
+.user-details .input-box details{
+	display: block;
+	font-weight: 800;
+	margin-bottom: 5px;
+}
+.user-details .input-box input{
+	height: 45px;
+	width: 100%;
+	outline: none;
+	border-radius: 5px;
+	border: 1px solid #a18181;
+	padding-left: 25px;
+	font-size: 16px;
+	border-bottom-width: 3px;
+	transition: all 0.4s ease;
+}
+.user-details .input-box input:focus,
+.user-details .input-box input:valid{
+	border-color: #9b59b6;
+}
+
+
+
+/*-------------button----------------*/
+
+ form .button-1{
+ 	height: 40px;
+ 	margin: 25px 0;
+ }
+ form .button-2{
+
+ 	height: 40px;
+ 	margin: 5px 0;
+ }
+ form .button-1 button{
+ 	height: 100%;
+ 	width: 100%;
+ 	outline: none;
+ 	color: black;
+ 	border: none;
+ 	font-size: 20px;
+ 	font-weight: 500;
+ 	border-radius: 100px;
+ 	letter-spacing: 1px;
+ 	background: linear-gradient(135deg, #EB0A20, #EB0AD2);
+ }
+ form .button-2 button{
+ 	height: 100%;
+ 	width: 50%;
+ 	outline: none;
+ 	color: black;
+ 	border: none;
+ 	font-size: 20px;
+ 	right: -100px;
+ 	font-weight: 500;
+ 	border-radius: 100px;
+ 	letter-spacing: 1px;
+ 	background: linear-gradient(135deg, #48FF00, #FFFC00);
+ }
+ form .button-1 button:hover{
+ 	background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+ }
+ form .button-2 button:hover{
+ 	background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+ }
+ @media (max-width: 584px){
+ 	.container{
+	max-width: 100%;
+	}
+	form .user-details .input-box{
+	width: 100%;
+	margin-bottom: 15px;
+}
+ form .gender-details .catagory{
+	width: 100%;
+}
+.container form .user-details{
+	max-height: 300px;
+	overflow-y: scroll;
+}
+ .user-details::-webkit-scrollbar{
+ 	width: 0;
+ }
+}
+
+
+form .choose .choose-title{
+	font-size: 30px;
+	font-weight: 500;
+}
+form .choose{
+	font-size: 20px;
+}
+form .choose .catagry{
+	display: flex;
+	width: 80%;
+	margin: 14px 0;
+	justify-content: space-around;
+}
+.choose .catagry label{
+	display: flex;
+	align-items: center;
+}
+.choose .catagry .class{
+	height: 8px;
+	width: 8px;
+	background: #0AD69A;
+	border-radius: 50%;
+	margin-right: 10px;
+	border: 5px solid transparent;
+	transition: all 0 0.3s ease;
+}
+ #class-1:checked ~ .catagry label .one,
+ #class-2:checked ~ .catagry label .two{
+ 	border-color: #8AD60A;
+ 	background: #9b59b6;
+ }
+ form input[type="radio"]{
+ 	display: none;
+ }

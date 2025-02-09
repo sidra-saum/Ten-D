@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: black;
+}
+.element h1{
+    color: white;
+    padding-top: 10px;
+    font-size: 60px;
+}
+.element img{
+    height: 550px;
+    width: 550px;
+}
